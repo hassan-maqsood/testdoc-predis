@@ -43,10 +43,10 @@
         <script>
 	        window.onload = function() {
 
-            var socket = io("{{env('BROADCAST_URL')}}");
+            var socket = io("{{env('BROADCAST_URL').':'.env('BROADCAST_PORT')}}");
 
             jQuery(window).on('beforeunload', function(){
-                console.log('still loading')
+                console.log('still loading');
                 socket.close();
             });
 
