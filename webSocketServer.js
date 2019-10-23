@@ -16,7 +16,7 @@ try {
     var Redis = require("ioredis");
     var redis = new Redis(redisPort, redisHost, {tls: {}});
     console.log("Connect to Redis server on port"+ redisPort);
-    redis.subscribe("user-appointments");
+    redis.subscribe("test-signal");
 
 }catch (err) {
     console.log('Redis connection failed to server');
