@@ -3,10 +3,11 @@
 namespace App\Events;
 
 use App\Events\Event;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class SomeEvent extends Event
+class SomeEvent extends Event implements ShouldBroadcastNow
 {
     use SerializesModels;
 
