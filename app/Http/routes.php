@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () {
-    event(new \App\Events\SomeEvent());
     return view('welcome');
 });
+
+Route::get('test', 'Controller@getTestView');
